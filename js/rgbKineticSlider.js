@@ -1,3 +1,5 @@
+let isPlaying = false;
+
 (function () {
   window.rgbKineticSlider = function (options) {
     ///////////////////////////////
@@ -1012,16 +1014,38 @@
       waveColor: 'darkgrey',
       progressColor: 'black',
       barWidth: 2,
-      barHeight: 0.5, // the height of the wave
+      barHeight: 0.7, // the height of the wave
       barGap: null,
     });
 
     function playTrack(index) {
+      isPlaying = true;
+      let elem = document.getElementById('playIcon');
+      elem.classList.remove('fa-play');
+      elem.classList.add('fa-pause');
       wavesurfer.load(options.audioTracks[index]);
       wavesurfer.on('ready', function () {
         wavesurfer.play();
       });
     }
+
+    function togglePlay() {
+      let elem = document.getElementById('playIcon');
+      if (!isPlaying) {
+        wavesurfer.play();
+        isPlaying = true;
+        elem.classList.remove('fa-play');
+        elem.classList.add('fa-pause');
+      } else {
+        wavesurfer.pause();
+        isPlaying = false;
+        elem.classList.remove('fa-pause');
+        elem.classList.add('fa-play');
+      }
+    }
+
+    let elem = document.getElementById('play');
+    elem.addEventListener('click', togglePlay);
 
     ///////////////////////////////
 
@@ -1082,10 +1106,8 @@
     function init() {
       // re init renderer on ready
       renderer.resize(imgWidth, imgHeight);
+
       wavesurfer.load(options.audioTracks[currentIndex]);
-      wavesurfer.on('ready', function () {
-        wavesurfer.play();
-      });
 
       // construct
       build_scene();

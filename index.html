@@ -10,6 +10,10 @@
     <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script>
       document.documentElement.className = 'js';
       var supportsCssVars = function () {
@@ -38,6 +42,9 @@
       <div class="content">
         <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
         <div class="player">
+          <button id="play">
+            <i id="playIcon" class="fa fa-play"></i>
+          </button>
           <div id="waveform"></div>
         </div>
         <nav>
@@ -61,7 +68,7 @@
     <script>
       // images setup
       const images = [
-        'img/nature-01.jpg',
+        'img/blue-03.jpg',
         'img/nature-02.jpg',
         'img/nature-03.jpg',
       ];
@@ -69,8 +76,8 @@
       // content setup
       const texts = [
         ['Rajesh', '...'],
-        ['Doors', 'Xox, TR-8, ER-1'],
-        ['Basement', 'Xox, TR-8'],
+        ['Doors', 'X0X, TR-8, ER-1'],
+        ['Basement', 'X0X, TR-8, Würlitzer, JX-3P'],
       ];
 
       const tracks = [
@@ -110,7 +117,11 @@
         textsDisplay: true, // show title
         textsSubTitleDisplay: true, // show subtitles
         textsTiltEffect: true, // enable text tilt
-        googleFonts: ['Playfair Display:700', 'Roboto:400'], // select google font to use
+        googleFonts: [
+          'Julius Sans One:400',
+          // 'Playfair Display:700',
+          'Roboto:400',
+        ], // select google font to use
         buttonMode: false, // enable button mode for title
         textsRgbEffect: true, // enable text rgb effect
         textsRgbIntensity: 0.03, // set text rgb intensity
@@ -128,6 +139,12 @@
         textSubTitleOffsetTop: 90, // subtitle offset top
         mobileTextSubTitleOffsetTop: 90, // mobile subtitle offset top
       });
+
+      // function togglePlay() {
+      //   wavesurfer.on('ready', function () {
+      //     wavesurfer.play();
+      //   });
+      // }
     </script>
   </body>
 </html>

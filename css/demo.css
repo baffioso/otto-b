@@ -16,10 +16,34 @@ canvas {
 .player {
   position: fixed;
   /* top: 60%; */
-  top: 0;
+  top: 20px;
   width: 100%;
   z-index: 10;
 }
+
+.player > button {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  z-index: 100;
+  cursor: pointer; /* Mouse pointer on hover */
+  border: none; /* Remove borders */
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.player > button > i {
+  color: rgba(194, 192, 192, 0.7);
+  font-size: 30px;
+}
+
+.player > button > i:hover {
+  color: rgb(126, 126, 126);
+}
+
+/* Darker background on mouse-over
+.btn:hover {
+  background-color: RoyalBlue;
+} */
 
 #waveform {
   /* height: 100px;
