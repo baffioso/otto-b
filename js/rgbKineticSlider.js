@@ -1020,7 +1020,9 @@ let audioLoading = true;
     });
 
     function playTrack(index) {
-      document.getElementById('play').style.display === 'none';
+      document.getElementById('play').style.display = 'none';
+      document.getElementById('audio-loading').style.display = 'block';
+
       let elem = document.getElementById('playIcon');
       elem.classList.remove('fa-play');
       elem.classList.add('fa-pause');
@@ -1030,7 +1032,8 @@ let audioLoading = true;
         wavesurfer.play();
         audioLoading = false;
         isPlaying = true;
-        document.getElementById('play').style.display === 'block';
+        document.getElementById('play').style.display = 'block';
+        document.getElementById('audio-loading').style.display = 'none';
       });
     }
 
@@ -1115,7 +1118,9 @@ let audioLoading = true;
       wavesurfer.load(options.audioTracks[currentIndex]);
 
       wavesurfer.on('ready', function () {
+        console.log('loaded');
         document.getElementById('play').style.display = 'block';
+        document.getElementById('audio-loading').style.display = 'none';
       });
 
       // construct
