@@ -1,4 +1,5 @@
 let isPlaying = false;
+let audioLoading = true;
 
 (function () {
   window.rgbKineticSlider = function (options) {
@@ -1014,18 +1015,22 @@ let isPlaying = false;
       waveColor: 'darkgrey',
       progressColor: 'black',
       barWidth: 2,
-      barHeight: 0.7, // the height of the wave
+      barHeight: 1, // the height of the wave
       barGap: null,
     });
 
     function playTrack(index) {
-      isPlaying = true;
+      document.getElementById('play').style.display === 'none';
       let elem = document.getElementById('playIcon');
       elem.classList.remove('fa-play');
       elem.classList.add('fa-pause');
       wavesurfer.load(options.audioTracks[index]);
+
       wavesurfer.on('ready', function () {
         wavesurfer.play();
+        audioLoading = false;
+        isPlaying = true;
+        document.getElementById('play').style.display === 'block';
       });
     }
 
@@ -1108,6 +1113,10 @@ let isPlaying = false;
       renderer.resize(imgWidth, imgHeight);
 
       wavesurfer.load(options.audioTracks[currentIndex]);
+
+      wavesurfer.on('ready', function () {
+        document.getElementById('play').style.display = 'block';
+      });
 
       // construct
       build_scene();

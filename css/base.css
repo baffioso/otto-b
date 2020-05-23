@@ -111,7 +111,7 @@ a:focus {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   justify-content: flex-start;
   align-items: center;
@@ -131,7 +131,7 @@ a:focus {
     align-content: space-between;
     width: 100%;
     max-width: none;
-    height: 100vh;
+    height: 100%;
     padding: 3rem;
     pointer-events: none;
     grid-template-columns: 75% 25%;
@@ -168,7 +168,7 @@ a:focus {
     pointer-events: auto;
   }
   .content {
-    height: 100vh;
+    height: 100%;
     justify-content: center;
   }
 }

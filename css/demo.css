@@ -1,3 +1,9 @@
+html,
+body,
+main {
+  height: 100%;
+}
+
 .rgbKineticSlider {
   display: block;
   position: relative;
@@ -39,7 +45,6 @@ canvas {
 .player > button > i:hover {
   color: rgb(126, 126, 126);
 }
-
 /* Darker background on mouse-over
 .btn:hover {
   background-color: RoyalBlue;
@@ -49,6 +54,7 @@ canvas {
   /* height: 100px;
   width: 100%; */
   z-index: 11;
+  cursor: pointer; /* Mouse pointer on hover */
 }
 
 nav a {
