@@ -32,32 +32,13 @@
           'Please view this demo in a modern browser that supports CSS Variables.'
         );
     </script>
-    <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
   </head>
   <body class="demo-1 loading">
     <main>
-      <!-- <div class="message">Some message for mobile (if needed).</div>
-			<div class="frame">
-				<div class="frame__title-wrap">
-					<h1 class="frame__title">rgbKineticSlider</h1>
-					<p class="frame__tagline">Demo 1</a></p>
-				</div>
-				<div class="frame__links">
-					<a href="https://github.com/hmongouachon/rgbKineticSlider">GitHub</a>
-				</div>
-				<div class="frame__demos">
-					<a href="index.html" class="frame__demo frame__demo--current">demo 1</a>
-					<a href="index2.html" class="frame__demo">demo 2</a>
-					<a href="index3.html" class="frame__demo">demo 3</a>
-				</div>
-			</div> -->
       <div class="content">
         <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
-        <div id="player">
-          <audio controls>
-            <source src="mp3/rajesh.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
+        <div class="player">
+          <div id="waveform"></div>
         </div>
         <nav>
           <a href="#" class="main-nav prev" data-nav="previous"
@@ -67,7 +48,6 @@
             >Next <span></span
           ></a>
         </nav>
-        <!-- <span class="notice">Swipe left... or right</span> -->
       </div>
     </main>
 
@@ -76,6 +56,8 @@
     <script src="js/libs/pixi-filters.min.js"></script>
     <script src="js/libs/TweenMax.min.js"></script>
     <script src="js/rgbKineticSlider.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+
     <script>
       // images setup
       const images = [
@@ -138,6 +120,21 @@
         textSubTitleLetterspacing: 2, // subtitle letter spacing
         textSubTitleOffsetTop: 90, // subtitle offset top
         mobileTextSubTitleOffsetTop: 90, // mobile subtitle offset top
+      });
+
+      let wavesurfer = WaveSurfer.create({
+        container: '#waveform',
+        waveColor: 'darkgrey',
+        progressColor: 'black',
+        barWidth: 2,
+        barHeight: 0.5, // the height of the wave
+        barGap: null,
+      });
+
+      wavesurfer.load('audio/rajesh.mp3');
+
+      wavesurfer.on('ready', function () {
+        wavesurfer.play();
       });
     </script>
   </body>
