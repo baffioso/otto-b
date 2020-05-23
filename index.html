@@ -73,9 +73,16 @@
         ['Basement', 'Xox, TR-8'],
       ];
 
+      const tracks = [
+        'audio/rajesh.mp3',
+        'audio/doors.mp3',
+        'audio/basement.mp3',
+      ];
+
       rgbKineticSlider = new rgbKineticSlider({
         slideImages: images, // array of images > must be 1920 x 1080
         itemsTitles: texts, // array of titles / subtitles
+        audioTracks: tracks,
 
         backgroundDisplacementSprite: 'img/map-9.jpg', // slide displacement image
         cursorDisplacementSprite: 'img/displace-circle.png', // cursor displacement image
@@ -120,21 +127,6 @@
         textSubTitleLetterspacing: 2, // subtitle letter spacing
         textSubTitleOffsetTop: 90, // subtitle offset top
         mobileTextSubTitleOffsetTop: 90, // mobile subtitle offset top
-      });
-
-      let wavesurfer = WaveSurfer.create({
-        container: '#waveform',
-        waveColor: 'darkgrey',
-        progressColor: 'black',
-        barWidth: 2,
-        barHeight: 0.5, // the height of the wave
-        barGap: null,
-      });
-
-      wavesurfer.load('audio/rajesh.mp3');
-
-      wavesurfer.on('ready', function () {
-        wavesurfer.play();
       });
     </script>
   </body>
