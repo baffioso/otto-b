@@ -29,8 +29,8 @@ canvas {
 
 .player > button {
   position: fixed;
-  top: 5px;
-  left: 5px;
+  top: 67px;
+  left: 0px;
   z-index: 100;
   cursor: pointer; /* Mouse pointer on hover */
   border: none; /* Remove borders */
