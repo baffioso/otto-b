@@ -1019,6 +1019,14 @@ let audioLoading = true;
       barGap: null,
     });
 
+    //make responsive
+    var responsiveWave = wavesurfer.util.debounce(function () {
+      wavesurfer.empty();
+      wavesurfer.drawBuffer();
+    }, 150);
+
+    window.addEventListener('resize', responsiveWave);
+
     function playTrack(index) {
       document.getElementById('play').style.display = 'none';
       document.getElementById('audio-loading').style.display = 'block';
