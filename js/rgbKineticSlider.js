@@ -1012,8 +1012,8 @@ let audioLoading = true;
 
     let wavesurfer = WaveSurfer.create({
       container: '#waveform',
-      waveColor: 'darkgrey',
-      progressColor: 'black',
+      waveColor: 'rgba(255,255,255, 0.5)',
+      progressColor: 'rgba(0,0,0, 0.5)',
       barWidth: 2,
       barHeight: 1, // the height of the wave
       barGap: null,

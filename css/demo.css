@@ -8,11 +8,11 @@ main {
 #logo {
   position: fixed;
   top: 50px;
-  z-index: 20;
+  z-index: 1;
   font-family: 'Kristi', cursive;
   font-size: 50px;
-  color: rgb(230, 50, 50);
-  opacity: 0.8;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
   cursor: pointer;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
