@@ -1023,6 +1023,7 @@ let audioLoading = true;
     var responsiveWave = wavesurfer.util.debounce(function () {
       wavesurfer.empty();
       wavesurfer.drawBuffer();
+      wavesurfer.start();
     }, 150);
 
     window.addEventListener('resize', responsiveWave);

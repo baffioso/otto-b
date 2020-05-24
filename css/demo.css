@@ -7,12 +7,12 @@ main {
 
 #logo {
   position: fixed;
-  top: 50px;
+  top: 10%;
   z-index: 1;
   font-family: 'Kristi', cursive;
   font-size: 50px;
   color: rgb(255, 255, 255);
-  opacity: 0.6;
+  opacity: 0.3;
   cursor: pointer;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -59,17 +59,17 @@ canvas {
 }
 
 .player > button > i {
-  color: rgba(209, 209, 209, 0.952);
+  color: rgba(129, 129, 129, 0.952);
   font-size: 30px;
 }
 
 .player > button > i:hover {
-  color: rgb(187, 187, 187);
+  color: rgba(155, 155, 155, 0.842);
 }
 
 #audio-loading {
   position: fixed;
-  top: 45px;
+  top: -20px;
   width: 100%;
   text-align: center;
   z-index: 19;
