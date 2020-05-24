@@ -39,16 +39,18 @@ canvas {
 }
 
 .player {
-  position: fixed;
+  position: absolute;
   /* top: 60%; */
-  top: 20px;
+  /* top: 20px; */
+  /* bottom: -60px; */
+  top: -62px;
   width: 100%;
   z-index: 10;
 }
 
 .player > button {
-  position: fixed;
-  top: 67px;
+  position: absolute;
+  top: 65px;
   left: 0px;
   z-index: 100;
   cursor: pointer; /* Mouse pointer on hover */
@@ -57,7 +59,7 @@ canvas {
 }
 
 .player > button > i {
-  color: rgba(216, 216, 216, 0.808);
+  color: rgba(209, 209, 209, 0.952);
   font-size: 30px;
 }
 
