@@ -1,7 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Gruppo&family=Kristi&family=Poiret+One&family=Sacramento&display=swap');
 html,
 body,
 main {
   height: 100%;
+}
+
+#logo {
+  position: fixed;
+  top: 50px;
+  z-index: 20;
+  font-family: 'Kristi', cursive;
+  font-size: 50px;
+  color: rgb(230, 50, 50);
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
 }
 
 .rgbKineticSlider {
@@ -51,7 +70,7 @@ canvas {
   top: 45px;
   width: 100%;
   text-align: center;
-  z-index: 1000;
+  z-index: 19;
 }
 /* Darker background on mouse-over
 .btn:hover {
