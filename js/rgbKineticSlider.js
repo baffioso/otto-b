@@ -1012,10 +1012,10 @@ let audioLoading = true;
 
     let wavesurfer = WaveSurfer.create({
       container: '#waveform',
-      waveColor: 'rgba(255,255,255, 0.5)',
-      progressColor: 'rgba(0,0,0, 0.5)',
+      waveColor: 'rgb(255,131,131, 0.4)',
+      progressColor: 'rgb(255,131,131, 0.7)',
       barWidth: 2,
-      barHeight: 1, // the height of the wave
+      barHeight: 0.4, // the height of the wave
       barGap: null,
     });
 
@@ -1023,7 +1023,7 @@ let audioLoading = true;
     var responsiveWave = wavesurfer.util.debounce(function () {
       wavesurfer.empty();
       wavesurfer.drawBuffer();
-      wavesurfer.start();
+      wavesurfer.play();
     }, 150);
 
     window.addEventListener('resize', responsiveWave);

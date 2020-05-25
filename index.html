@@ -51,11 +51,14 @@
               <div></div>
             </div>
           </div>
-          <button id="play" style="display: none;">
+          <!-- <button id="play" style="display: none;">
             <i id="playIcon" class="fa fa-play"></i>
-          </button>
+          </button> -->
           <div id="waveform"></div>
         </div>
+        <button id="play" style="display: none;">
+          <i id="playIcon" class="fa fa-play"></i>
+        </button>
         <nav>
           <a href="#" class="main-nav prev" data-nav="previous"
             >Prev <span></span
@@ -76,7 +79,7 @@
 
     <script>
       // images setup
-      const images = ['img/train.png', 'img/esc.png', 'img/nature-02.jpg'];
+      const images = ['img/kbh.png', 'img/esc.png', 'img/train.png'];
 
       // content setup
       const texts = [
@@ -132,14 +135,14 @@
         textsRgbIntensity: 0.03, // set text rgb intensity
         navTextsRgbIntensity: 15, // set text rgb intensity for regular nav
 
-        textTitleColor: 'white', // title color
+        textTitleColor: 'rgb(255,131,131)', // title color
         textTitleSize: 125, // title size
         mobileTextTitleSize: 80, // title size
         textTitleLetterspacing: 3, // title letterspacing
 
-        textSubTitleColor: 'white', // subtitle color ex : 0x000000
-        textSubTitleSize: 21, // subtitle size
-        mobileTextSubTitleSize: 21, // mobile subtitle size
+        textSubTitleColor: 'rgba(255,131,131, 0.8)', // subtitle color ex : 0x000000
+        textSubTitleSize: 17, // subtitle size
+        mobileTextSubTitleSize: 17, // mobile subtitle size
         textSubTitleLetterspacing: 2, // subtitle letter spacing
         textSubTitleOffsetTop: 90, // subtitle offset top
         mobileTextSubTitleOffsetTop: 90, // mobile subtitle offset top
