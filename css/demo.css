@@ -87,13 +87,14 @@ canvas {
 }
 
 nav a {
-  /* color: var(--color-link-hover); */
-  color: rgb(255,131,131)
+  color: var(--color-link-hover);
+  /* color: rgb(255, 131, 131); */
   text-decoration: none;
   /*margin-right: 14px;*/
   position: absolute;
   top: 50vh;
   z-index: 1;
+  text-shadow: 2px;
 }
 
 nav a:hover,
@@ -158,11 +159,11 @@ nav a.prev {
 }
 .lds-ellipsis div {
   position: absolute;
-  top: 33px;
+  top: 25px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: rgb(212, 212, 212);
+  background: rgba(255, 131, 131, 0.8);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 .lds-ellipsis div:nth-child(1) {

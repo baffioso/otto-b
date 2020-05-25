@@ -79,19 +79,26 @@
 
     <script>
       // images setup
-      const images = ['img/kbh.png', 'img/esc.png', 'img/train.png'];
+      const images = [
+        'img/kbh.png',
+        'img/doors.jpg',
+        'img/train.png',
+        'img/ottobvej.png',
+      ];
 
       // content setup
       const texts = [
-        ['Rajesh', 'JX-3P, TR-8, ER-1, JP-8000, Sub37'],
+        ['Rajesh', 'JX-3P, TR-8, ER-1, JP-8000, SUB37'],
         ['Doors', 'X0X, TR-8, TR-808, ER-1, JP-8000'],
         ['Basement', 'X0X, TR-8, Würlitzer, JX-3P'],
+        ['Take Time', 'JX-3P, SUB37, TR-8, EMX-1'],
       ];
 
       const tracks = [
         'audio/rajesh.mp3',
         'audio/doors.mp3',
         'audio/basement.mp3',
+        'audio/take.mp3',
       ];
 
       rgbKineticSlider = new rgbKineticSlider({
@@ -111,7 +118,7 @@
         swipeDistance: window.innerWidth * 0.4, // swipe distance - ex : 580
         swipeScaleIntensity: 2, // scale intensity during swipping
 
-        slideTransitionDuration: 1, // transition duration
+        slideTransitionDuration: 2, // transition duration
         transitionScaleIntensity: 100, // scale intensity during transition
         transitionScaleAmplitude: 160, // scale amplitude during transition
 
