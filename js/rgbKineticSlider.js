@@ -1021,9 +1021,7 @@ let audioLoading = true;
 
     //make responsive
     var responsiveWave = wavesurfer.util.debounce(function () {
-      wavesurfer.empty();
       wavesurfer.drawBuffer();
-      wavesurfer.play();
     }, 150);
 
     window.addEventListener('resize', responsiveWave);
