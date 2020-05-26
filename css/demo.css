@@ -86,6 +86,10 @@ canvas {
   cursor: pointer; /* Mouse pointer on hover */
 }
 
+showtitle {
+  padding-top: 10px;
+}
+
 nav a {
   color: var(--color-link-hover);
   /* color: rgb(255, 131, 131); */

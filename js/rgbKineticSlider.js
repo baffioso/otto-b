@@ -1014,17 +1014,42 @@ let audioLoading = true;
       container: '#waveform',
       waveColor: 'rgb(255,131,131, 0.4)',
       progressColor: 'rgb(255,131,131, 0.7)',
-      barWidth: 2,
-      barHeight: 0.4, // the height of the wave
+      barWidth: 2.5,
+      barHeight: 0.5, // the height of the wave
       barGap: null,
+      barRadius: 1,
+      responsive: true,
+      // plugins: [
+      //   WaveSurfer.cursor.create({
+      //     showTime: true,
+      //     opacity: 1,
+      //     customShowTimeStyle: {
+      //       'background-color': 'rgba(0,0,0,0.4)',
+      //       color: '#fff',
+      //       padding: '2px',
+      //       'font-size': '10px',
+      //     },
+      //   }),
+      // ],
     });
 
-    //make responsive
-    var responsiveWave = wavesurfer.util.debounce(function () {
-      wavesurfer.drawBuffer();
-    }, 150);
+    // //make responsive
+    // var responsiveWave = wavesurfer.util.debounce(function () {
+    //   wavesurfer.drawBuffer();
+    // }, 150);
 
-    window.addEventListener('resize', responsiveWave);
+    // window.addEventListener('resize', responsiveWave);
+
+    // play next track when finished
+    wavesurfer.on('finish', function () {
+      if (currentIndex >= 0 && currentIndex < options.slideImages.length - 1) {
+        playTrack(currentIndex + 1);
+        slideTransition(currentIndex + 1);
+      } else {
+        slideTransition(0);
+        playTrack(0);
+      }
+    });
 
     function playTrack(index) {
       document.getElementById('play').style.display = 'none';
